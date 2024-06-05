@@ -4,6 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
+        string greeting = "Hello, Sandbox!";
+        Console.WriteLine(greeting);
+        while(true)
+        {
+            int delay = 250;
+            Console.Write("/\b");
+            Thread.Sleep(delay);
+            Console.Write("-\b");
+            Thread.Sleep(delay);
+            Console.Write("\\\b");
+            Thread.Sleep(delay);
+            Console.Write("|\b");
+            Thread.Sleep(delay);
+
+        }
     }
 }
