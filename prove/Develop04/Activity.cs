@@ -14,20 +14,20 @@ class Activity{
 
     public void LoadingAnimation(int duration){
         
-        int delay = 250;
+        int delay = 500;
         DateTime start = DateTime.Now;
         while ((DateTime.Now - start).TotalSeconds < duration)
         {
-            Console.Write("/");
+            Console.Write("◴");
             Thread.Sleep(delay);
             Console.Write("\b");
-            Console.Write("-");
+            Console.Write("◷");
             Thread.Sleep(delay);
             Console.Write("\b");
-            Console.Write("\\");
+            Console.Write("◶");
             Thread.Sleep(delay);
             Console.Write("\b");
-            Console.Write("|");
+            Console.Write("◵");
             Thread.Sleep(delay);
             Console.Write("\b");
         }

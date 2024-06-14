@@ -31,14 +31,19 @@ class BreathingActivity : Activity
             BreathOut(6);
         }
 
-
-
-        if (additionalTime > 0)
+        if (additionalTime > 5)
         {
             Console.WriteLine("");
 
             BreathIn(4);
             BreathOut(6);
+        }
+        else if (additionalTime > 0)
+        {
+            Console.WriteLine("");
+
+            BreathIn(2);
+            BreathOut(3);
         }
 
 
