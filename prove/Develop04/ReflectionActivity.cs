@@ -30,7 +30,7 @@ class ReflectionActivity : Activity
         DisplayStart();
         Console.WriteLine("Consider the following prompt:");
         Console.WriteLine("");
-        Console.WriteLine($"--- {getPrompt()} ---");
+        Console.WriteLine($"--- {GetPrompt()} ---");
         Console.WriteLine("");
         Console.WriteLine("When you have something in mind, press enter to continue.");
         Console.ReadLine();
@@ -41,14 +41,14 @@ class ReflectionActivity : Activity
         int fullCycles = _duration / 15;
 
         for (int i = 0; i < fullCycles; i++){
-            Console.Write("> " + getQuestion());
+            Console.Write("> " + GetQuestion());
             LoadingAnimation(15);
             Console.WriteLine("");
         }
         DisplayEnd();
         Console.Clear();
     }
-    private string getPrompt()
+    private string GetPrompt()
     {
         Random random = new Random();
         int index = random.Next(_prompts.Count);
@@ -56,7 +56,7 @@ class ReflectionActivity : Activity
     }
 
 
-    private string getQuestion()
+    private string GetQuestion()
     {
         Random random = new Random();
         int index = random.Next(_questions.Count);
