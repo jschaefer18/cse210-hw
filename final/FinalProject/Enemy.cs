@@ -1,17 +1,17 @@
 
 public class Enemy : GameEntity{
-    protected int experienceDropped;
+    protected int _experienceDropped;
 
 
 
     public Enemy(int experienceDropped, string name, int maxHealth, int attackPower, int resistance)
         : base(name, maxHealth, attackPower, resistance)
     {
-        this.experienceDropped = experienceDropped;
+        this._experienceDropped = experienceDropped;
     }
 
     public int GetExperienceDropped()
     {
-        return experienceDropped;
+        return _experienceDropped;
     }
 }

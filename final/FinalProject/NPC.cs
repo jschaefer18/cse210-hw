@@ -1,6 +1,5 @@
 class NPC : GameEntity{
     protected string dialiogue;
-    Item heldItem;
     public NPC(string name, int maxHealth, int attackPower, int resistance, string dialiogue) : base(name, maxHealth, attackPower, resistance)
     {
         this.dialiogue = dialiogue;
@@ -15,8 +14,4 @@ class NPC : GameEntity{
 
 
 
-    public void GiveItem(Item item)
-    {
-        heldItem = item;
-    }
 }

@@ -1,11 +1,15 @@
 public class Weapon : Item{
-    int attackPower;
+    protected int _attackPower;
+    
     public Weapon(string name, string description, int attackPower) : base(name,description)
     {
-        this.attackPower = attackPower;
+        this._attackPower = attackPower;
     }
     public int GetAttackPower()
     {
-        return attackPower;
+        return _attackPower;
     }
+
+
+
 }

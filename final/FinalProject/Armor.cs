@@ -1,11 +1,12 @@
 public class Armor : Item{
-    int resistance;
+    protected int _resistance;
     public Armor(string name, string description, int resistance) : base(name,description)
     {
-        this.resistance = resistance;
+        this._resistance = resistance;
     }
     public int GetResistance()
     {
-        return resistance;
+        return _resistance;
     }
+
 }

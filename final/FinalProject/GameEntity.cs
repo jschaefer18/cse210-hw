@@ -1,63 +1,63 @@
 public class GameEntity{
-    protected string name;
-    protected int currentHealth;
-    protected int maxHealth;
-    protected int attackPower;
-    protected int resistance;
+    protected string _name;
+    protected int _currentHealth;
+    protected int _maxHealth;
+    protected int _attackPower;
+    protected int _resistance;
 
     public GameEntity(string name, int maxHealth, int attackPower, int resistance)
     {
-        this.name = name;
-        this.maxHealth = maxHealth;
-        this.currentHealth = maxHealth;
-        this.attackPower = attackPower;
-        this.resistance = resistance;
+        this._name = name;
+        this._maxHealth = maxHealth;
+        this._currentHealth = maxHealth;
+        this._attackPower = attackPower;
+        this._resistance = resistance;
     }
 
-    public int CalculateAttack(){
+    public virtual int CalculateAttack(){
         Random random = new Random();
-        int additionalDamage = random.Next(0, attackPower * 5);
-        int damage = attackPower * 10 + additionalDamage;
+        int additionalDamage = random.Next(0, _attackPower * 5);
+        int damage = _attackPower * 10 + additionalDamage;
         return damage;
 
     }
 
     public void ReceiveDamage(int damage){
-        currentHealth = currentHealth - damage;
-        if (currentHealth < 0)
+        _currentHealth = _currentHealth - damage;
+        if (_currentHealth < 0)
         {
-            currentHealth = 0;
+            _currentHealth = 0;
         }
     }
 
     public int CalculateDamageTaken(int incomingDamage)
     {
-        int damageTaken = Math.Max(0, incomingDamage - (resistance * 10));
+        int damageTaken = Math.Max(0, incomingDamage - (_resistance * 10));
         return damageTaken;
     }
     public string GetName()
     {
-        return name;
+        return _name;
     }
 
     public int GetCurrentHealth()
     {
-        return currentHealth;
+        return _currentHealth;
         
     }
 
     public int GetMaxHealth()
     {
-        return maxHealth;
+        return _maxHealth;
     }
 
     public int GetAttackPower()
     {
-       return attackPower;
+       return _attackPower;
     }
 
     public int GetResistance()
     {
-        return resistance;
+        return _resistance;
     }
 }
